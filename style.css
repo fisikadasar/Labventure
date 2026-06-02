@@ -259,52 +259,54 @@ footer{
     margin:auto auto 2rem;
 }
 
-.contact-grid{
-
-    display:grid;
-
-    gap:1rem;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(260px,1fr));
+.contact-grid {
+    display: grid;
+    gap: 1rem;
+    /* Lebar minimal diperkecil jadi 200px agar muat 3 kotak & tidak kebesaran */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    justify-content: center;
 }
 
-.contact-card{
-
-    background:#25D366;
-
-    color:white;
-
-    text-decoration:none;
-
-    padding:1.5rem;
-
-    border-radius:20px;
-
-    display:flex;
-    align-items:center;
-
-    gap:1rem;
-
-    transition:.3s;
+.contact-card {
+    color: white;
+    text-decoration: none;
+    /* Padding diperkecil agar kotaknya lebih ramping */
+    padding: 1rem 1.2rem; 
+    border-radius: 15px; 
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: .3s;
 }
 
-.contact-card:hover{
-
-    transform:translateY(-5px);
-
-    box-shadow:
-    0 10px 25px rgba(37,211,102,.3);
+.contact-card h3 {
+    font-size: 1.1rem; /* Ukuran font sedikit diperkecil */
+    margin-bottom: 0.1rem;
 }
 
-.contact-card span{
-
-    font-size:2rem;
+.contact-card small {
+    font-size: 0.8rem;
+    opacity: 0.9;
 }
 
-.contact-card h3{
+/* --- WARNA KHUSUS WHATSAPP --- */
+.contact-card.wa {
+    background: #25D366;
+}
 
-    margin-bottom:.2rem;
+.contact-card.wa:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, .3);
+}
+
+/* --- WARNA KHUSUS INSTAGRAM --- */
+.contact-card.ig {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.contact-card.ig:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(220, 39, 67, .3);
 }
 
 section{
