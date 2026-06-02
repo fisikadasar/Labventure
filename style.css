@@ -306,3 +306,30 @@ footer{
 
     margin-bottom:.2rem;
 }
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.time-box {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  padding: 1rem;
+  border-radius: 12px;
+  min-width: 80px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.time-box h2 {
+  font-size: 2rem;
+  margin-bottom: 0.2rem;
+}
+
+.time-box small {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
