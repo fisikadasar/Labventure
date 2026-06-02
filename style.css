@@ -372,62 +372,60 @@ padding:80px 10%;
 
 /* --- COUNTDOWN DI HERO SECTION --- */
 .hero-countdown {
-    margin-top: 3.5rem;
+    margin-top: 3rem;
 }
 
-.countdown-digital {
+.countdown-boxes {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 1.5rem; /* Jarak antar blok waktu */
-    color: white;
-    text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    gap: 15px;
+    flex-wrap: wrap; /* Aman kalau dibuka di layar HP yang sempit */
 }
 
-/* Mengelompokkan angka dan teks ke dalam satu kolom */
-.time-unit {
+.time-box {
+    background: white; /* Memberi kotak putih belakangnya */
+    color: var(--primary); /* Angkanya berwarna biru gelap agar senada */
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15); /* Efek melayang */
+    min-width: 95px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 90px; /* Menjaga agar lebarnya konsisten */
 }
 
-.time-unit span {
-    font-size: 4.5rem;
+.time-box span {
+    font-size: 3rem; /* Ukurannya pas, tidak kebesaran */
     font-weight: 800;
-    line-height: 1; 
+    line-height: 1;
+    margin-bottom: 5px;
 }
 
-.time-unit small {
-    font-size: 1rem;
+.time-box small {
+    font-size: 0.9rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 3px;
-    opacity: 0.9;
-    margin-top: 8px;
+    letter-spacing: 2px;
+    color: #666; /* Teks hari/jam warna abu-abu elegan */
 }
 
-.countdown-digital .separator {
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin-top: -30px; /* Menarik titik dua ke atas agar sejajar dengan angka, bukan teksnya */
-    animation: blink 1s step-start infinite;
-}
-
-@keyframes blink {
-    50% { opacity: 0; }
-}
-
-/* Penyesuaian agar tidak kebesaran kalau dibuka di HP / Layar Sempit */
+/* Penyesuaian untuk layar HP / Mobile */
 @media(max-width: 768px) {
-    .countdown-digital { gap: 0.5rem; }
-    .time-unit { min-width: 60px; }
-    .time-unit span { font-size: 2.8rem; }
-    .time-unit small { font-size: 0.75rem; letter-spacing: 1px; }
-    .countdown-digital .separator { font-size: 2.5rem; margin-top: -20px; }
-}
-@keyframes blink {
-  50% { opacity: 0; }
+    .countdown-boxes {
+        gap: 10px;
+    }
+    .time-box {
+        min-width: 75px;
+        padding: 12px 15px;
+        border-radius: 12px;
+    }
+    .time-box span {
+        font-size: 2.2rem;
+    }
+    .time-box small {
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+    }
 }
 
 /* FAQ STYLE */
