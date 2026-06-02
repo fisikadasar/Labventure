@@ -330,3 +330,96 @@ border-radius:15px;
 box-shadow:0 10px 20px rgba(0,0,0,.08);
 min-width:100px;
 }
+/* COUNTDOWN DIGITAL STYLE */
+.countdown-section {
+  text-align: center;
+  padding: 4rem 10%;
+  background: white; /* Memberi warna latar agar terpisah dari section atasnya */
+}
+
+.countdown-section h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.countdown-digital {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 3rem; 
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.countdown-digital .separator {
+  font-size: 2.5rem;
+  margin-bottom: 8px; 
+  animation: blink 1s step-start infinite;
+}
+
+.countdown-labels {
+  display: flex;
+  justify-content: center;
+  gap: 3.2rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #666;
+  margin-top: 5px;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* FAQ STYLE */
+.faq {
+  padding: 4rem 10%;
+}
+
+.faq h2 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 2rem;
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+}
+
+.faq-btn {
+  width: 100%;
+  text-align: left;
+  padding: 1.2rem 1.5rem;
+  background: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--dark);
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  font-family: 'Poppins', sans-serif;
+  transition: 0.3s;
+}
+
+.faq-btn:hover {
+  color: var(--primary);
+}
+
+.faq-content {
+  padding: 1rem 1.5rem;
+  background: #e2e8f0;
+  border-radius: 0 0 12px 12px;
+  margin-top: -5px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Penyesuaian Mobile untuk Countdown Digital */
+@media(max-width: 768px) {
+  .countdown-digital { font-size: 2rem; gap: 5px; }
+  .countdown-digital .separator { font-size: 1.8rem; }
+  .countdown-labels { gap: 1.8rem; font-size: 0.7rem; }
+}
