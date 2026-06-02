@@ -369,25 +369,6 @@ section{
 padding:80px 10%;
 }
 
-.countdown-section{
-text-align:center;
-}
-
-#countdown{
-display:flex;
-justify-content:center;
-gap:20px;
-margin-top:30px;
-flex-wrap:wrap;
-}
-
-.time-box{
-background:white;
-padding:20px;
-border-radius:15px;
-box-shadow:0 10px 20px rgba(0,0,0,.08);
-min-width:100px;
-}
 
 /* --- COUNTDOWN DI HERO SECTION --- */
 .hero-countdown {
@@ -493,9 +474,3 @@ min-width:100px;
   line-height: 1.6;
 }
 
-/* Penyesuaian Mobile untuk Countdown Digital */
-@media(max-width: 768px) {
-  .countdown-digital { font-size: 2rem; gap: 5px; }
-  .countdown-digital .separator { font-size: 1.8rem; }
-  .countdown-labels { gap: 1.8rem; font-size: 0.7rem; }
-}
