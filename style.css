@@ -307,48 +307,26 @@ footer{
     margin-bottom:.2rem;
 }
 
-.countdown-digital {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  font-size: 3rem; /* Ukuran angka jam */
-  font-weight: 700;
-  margin-top: 1.5rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+section{
+padding:80px 10%;
 }
 
-.countdown-digital .separator {
-  font-size: 2.5rem;
-  margin-bottom: 5px; /* Menyesuaikan posisi titik dua */
-  animation: blink 1s step-start infinite;
+.countdown-section{
+text-align:center;
 }
 
-.countdown-labels {
-  display: flex;
-  justify-content: center;
-  gap: 3.5rem; /* Jarak antar teks (Hari, Jam, dll) */
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 2rem;
-  opacity: 0.8;
+#countdown{
+display:flex;
+justify-content:center;
+gap:20px;
+margin-top:30px;
+flex-wrap:wrap;
 }
 
-/* Animasi kedap-kedip untuk titik dua */
-@keyframes blink {
-  50% { opacity: 0; }
-}
-
-/* Penyesuaian untuk layar HP */
-@media(max-width: 768px) {
-  .countdown-digital { font-size: 2rem; gap: 5px; }
-  .countdown-digital .separator { font-size: 1.8rem; }
-  .countdown-labels { gap: 2rem; font-size: 0.7rem; }
-}
-
-.time-box small {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.time-box{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+min-width:100px;
 }
