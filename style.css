@@ -282,12 +282,16 @@ footer{
 
 .contact-card h3 {
     font-size: 1.1rem; /* Ukuran font sedikit diperkecil */
-    margin-bottom: 0.1rem;
+    margin-bottom: 0rem;
+    line-height: 1.1;
 }
 
 .contact-card small {
     font-size: 0.8rem;
     opacity: 0.9;
+    display: block;
+    margin-top: 2px;
+    line-height: 1;
 }
 
 /* --- WARNA KHUSUS WHATSAPP --- */
