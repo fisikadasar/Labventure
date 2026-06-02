@@ -307,25 +307,44 @@ footer{
     margin-bottom:.2rem;
 }
 
-.countdown {
+.countdown-digital {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  align-items: center;
+  gap: 10px;
+  font-size: 3rem; /* Ukuran angka jam */
+  font-weight: 700;
+  margin-top: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.countdown-digital .separator {
+  font-size: 2.5rem;
+  margin-bottom: 5px; /* Menyesuaikan posisi titik dua */
+  animation: blink 1s step-start infinite;
+}
+
+.countdown-labels {
+  display: flex;
+  justify-content: center;
+  gap: 3.5rem; /* Jarak antar teks (Hari, Jam, dll) */
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   margin-bottom: 2rem;
+  opacity: 0.8;
 }
 
-.time-box {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(5px);
-  padding: 1rem;
-  border-radius: 12px;
-  min-width: 80px;
-  border: 1px solid rgba(255,255,255,0.3);
+/* Animasi kedap-kedip untuk titik dua */
+@keyframes blink {
+  50% { opacity: 0; }
 }
 
-.time-box h2 {
-  font-size: 2rem;
-  margin-bottom: 0.2rem;
+/* Penyesuaian untuk layar HP */
+@media(max-width: 768px) {
+  .countdown-digital { font-size: 2rem; gap: 5px; }
+  .countdown-digital .separator { font-size: 1.8rem; }
+  .countdown-labels { gap: 2rem; font-size: 0.7rem; }
 }
 
 .time-box small {
